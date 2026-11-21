@@ -1,0 +1,37 @@
+{
+  "_catatan": "Semua nilai berstatus 'asumsi' adalah nilai awal untuk simulasi. Ganti dengan nilai bersumber, isi field 'sumber', ubah status menjadi 'bersumber', lalu bangkitkan ulang data.",
+  "seed": 42,
+  "periode": {"mulai": "2025-11-01", "selesai": "2026-10-31", "tahun_acuan_umur": 2026},
+  "batas_usia_regulasi": {"nilai": 25, "satuan": "tahun", "status": "asumsi", "sumber": "", "catatan": "Verifikasi di teks resmi Permenhub sebelum dikutip."},
+  "jumlah_armada": 35,
+  "tahun_pembuatan": {"min": 2004, "maks": 2025, "status": "asumsi"},
+  "kelas": {
+    "ekonomi":   {"proporsi": 0.40, "kapasitas": 50, "biaya_peremajaan": 1800000000, "status": "asumsi", "sumber": ""},
+    "eksekutif": {"proporsi": 0.45, "kapasitas": 32, "biaya_peremajaan": 2400000000, "status": "asumsi", "sumber": ""},
+    "sleeper":   {"proporsi": 0.15, "kapasitas": 22, "biaya_peremajaan": 3200000000, "status": "asumsi", "sumber": ""}
+  },
+  "merek_sasis": ["Sasis A", "Sasis B", "Sasis C"],
+  "trayek": [
+    {"id": "T01", "nama": "Jakarta - Bandung",       "jarak_km": 150,  "lf_dasar": 0.68},
+    {"id": "T02", "nama": "Jakarta - Cirebon",       "jarak_km": 220,  "lf_dasar": 0.62},
+    {"id": "T03", "nama": "Jakarta - Purwokerto",    "jarak_km": 350,  "lf_dasar": 0.66},
+    {"id": "T04", "nama": "Jakarta - Semarang",      "jarak_km": 450,  "lf_dasar": 0.71},
+    {"id": "T05", "nama": "Jakarta - Yogyakarta",    "jarak_km": 560,  "lf_dasar": 0.78},
+    {"id": "T06", "nama": "Jakarta - Solo",          "jarak_km": 560,  "lf_dasar": 0.74},
+    {"id": "T07", "nama": "Jakarta - Surabaya",      "jarak_km": 780,  "lf_dasar": 0.72},
+    {"id": "T08", "nama": "Jakarta - Malang",        "jarak_km": 850,  "lf_dasar": 0.69},
+    {"id": "T09", "nama": "Jakarta - Bandar Lampung","jarak_km": 240,  "lf_dasar": 0.60},
+    {"id": "T10", "nama": "Jakarta - Denpasar",      "jarak_km": 1180, "lf_dasar": 0.64}
+  ],
+  "trayek_status": {"status": "asumsi", "sumber": "", "catatan": "Jarak adalah perkiraan kasar; ganti dengan jarak dari peta. lf_dasar adalah asumsi."},
+  "trip_per_hari": {"jarak_maks_dua_trip_km": 300, "status": "asumsi"},
+  "musiman_load_factor": {"nilai": [1.00, 1.18, 0.88, 0.92, 0.95, 1.05, 1.22, 1.08, 1.00, 0.97, 0.95, 0.96], "catatan": "indeks Jan..Des; puncak Desember (libur akhir tahun) dan sekitar Lebaran; asumsi", "status": "asumsi"},
+  "kerusakan": {"lambda0_per_10rb_km": 0.12, "k_umur": 0.08, "hari_henti_min": 1, "hari_henti_maks": 3, "biaya_perbaikan_rata": 3500000, "status": "asumsi"},
+  "perawatan": {"b0_rp_per_km": 450, "k_umur": 0.06, "sigma_lognormal": 0.15, "servis_tiap_km": 10000, "biaya_servis": 2500000, "status": "asumsi"},
+  "bbm": {"e0_km_per_liter": 3.8, "penurunan_per_tahun": 0.04, "sigma": 0.15, "min": 2.0, "maks": 4.5, "status": "asumsi"},
+  "anomali": {
+    "unit_muda_rawan": {"jumlah": 2, "umur_maks": 7, "pengali_kerusakan": 3.0},
+    "unit_tua_overhaul": {"jumlah": 1, "umur_min": 16, "pengali_biaya": 0.45, "pengali_kerusakan": 0.45},
+    "unit_lewat_batas": {"jumlah": 1, "tahun_pembuatan": 2000}
+  }
+}
