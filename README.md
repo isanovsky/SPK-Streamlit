@@ -10,16 +10,7 @@ python -m venv .venv
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
 Buka http://localhost:8501. Uji perhitungan: `python -m pytest -q`.
-
-## Mengganti banner
-
-Taruh gambar Anda di `assets/` dengan nama `banner.png` (atau `.jpg`, `.jpeg`, `.webp`) dan timpa
-file contoh. Ukuran yang disarankan: rasio sekitar 6:1 hingga 8:1, misalnya 1800 × 300 px. Di desktop
-banner dipotong (crop) setinggi 150 px dari sisi kiri-tengah, jadi taruh teks/logo di bagian kiri.
-Tinggi bisa diubah lewat `BANNER_TINGGI_PX` di `spk/ui.py`. Hapus semua file banner jika tidak ingin
-menampilkan banner.
 
 ## Struktur
 
